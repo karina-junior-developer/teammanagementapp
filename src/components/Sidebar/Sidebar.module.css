@@ -1,0 +1,19 @@
+.sidebar {
+	margin-top: 0px;
+}
+
+.sidebarLi {
+	list-style: none;
+	font-size: 14px;
+	padding-bottom: 10px;
+	width: 100px;
+	text-decoration: underline;
+}
+
+.sidebarLi:hover {
+	cursor: pointer;
+}
+
+.sidebarUl {
+	margin: 0;
+}

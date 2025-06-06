@@ -1,0 +1,8 @@
+.searchInput {
+	padding: 0.5rem;
+	border: none;
+	border-radius: 10px;
+	outline: none;
+	width: 350px;
+	padding-left: 15px;
+}

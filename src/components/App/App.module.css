@@ -1,0 +1,32 @@
+.appHeaderAndSearch {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 0;
+}
+
+.headerBlock {
+	margin-top: 20px;
+	text-align: center;
+}
+
+.searchbarBlock {
+	text-align: center;
+	margin-top: 40px;
+}
+
+.appContent {
+	display: flex;
+	flex: 1;
+}
+
+.sidebarBlock {
+	width: 20%;
+}
+
+.mainBlock {
+	width: 80%;
+	flex: 1;
+	margin-left: 70px;
+	margin-top: 20px;
+}

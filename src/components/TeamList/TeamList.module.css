@@ -1,0 +1,37 @@
+.teamList {
+	margin-top: 30px;
+	width: 300px;
+}
+
+.teamListLi {
+	list-style: none;
+	padding-bottom: 5px;
+	margin-bottom: 10px;
+	width: 450px;
+	font-size: 14px;
+}
+
+.main {
+	display: flex;
+	flex-direction: row;
+}
+
+.title {
+	padding-top: 4px;
+	width: 80%;
+}
+
+.buttons {
+	width: 20%;
+}
+
+button {
+	border: none;
+	outline: none;
+	border-radius: 10px;
+	height: 25px;
+	width: 55px;
+	font-size: 13px;
+	background-color: rgb(245, 245, 161);
+	cursor: pointer;
+}
