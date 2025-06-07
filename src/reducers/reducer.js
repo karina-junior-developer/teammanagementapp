@@ -1,8 +1,4 @@
-export const initialState = {
-	teams: [],
-	originalTeams: [],
-	isLoading: false,
-};
+import { initialState } from '../initialstate';
 
 export const reducer = (state = initialState, action) => {
 	switch (action.type) {
@@ -22,6 +18,68 @@ export const reducer = (state = initialState, action) => {
 			return {
 				...state,
 				isLoading: action.payload,
+			};
+		}
+
+		case 'SET_TEAM_ID': {
+			return {
+				...state,
+				teamId: action.payload,
+			};
+		}
+
+		case 'SET_EDIT_TEAM_NAME': {
+			return {
+				...state,
+				editTeam: {
+					...state.editTeam,
+					id: action.payload.teamId,
+					name: action.payload.teamName,
+				},
+			};
+		}
+
+		case 'SET_EDIT_MEMBERS_NAME': {
+			return {
+				...state,
+				editMember: {
+					...state.editMember,
+					teamId: action.payload.teamId,
+					id: action.payload.memberId,
+					name: action.payload.name,
+				},
+			};
+		}
+
+		case 'SET_EDIT_ MEMBERS_ROLE': {
+			return {
+				...state,
+				editMember: {
+					...state.editMember,
+					teamId: action.payload.teamId,
+					id: action.payload.memberId,
+					role: action.payload.role,
+				},
+			};
+		}
+
+		case 'SET_EDIT_MEMBERS_EMAIL': {
+			return {
+				...state,
+				editMember: {
+					...state.editMember,
+					teamId: action.payload.teamId,
+					id: action.payload.memberId,
+					email: action.payload.email,
+				},
+			};
+		}
+
+		case 'CANCEL_EDIT': {
+			return {
+				...state,
+				editTeam: initialState.editTeam,
+				editMember: initialState.editMember,
 			};
 		}
 

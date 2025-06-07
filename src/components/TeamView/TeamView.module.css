@@ -1,0 +1,66 @@
+.teamBlock {
+	margin-top: 50px;
+	width: 600px;
+}
+
+.selectedTeamCaption {
+	font-size: 16px;
+	margin-bottom: 14px;
+	margin-top: 0;
+	padding-top: 7px;
+}
+
+table {
+	width: 100%;
+	font-size: 15px;
+}
+
+th,
+td {
+	border: 1px solid black;
+	text-align: center;
+	padding: 5px 10px;
+}
+
+.backButtonBlock {
+	margin-top: 40px;
+}
+
+.backButton {
+	border: none;
+	outline: none;
+	border-radius: 10px;
+	height: 35px;
+	padding: 5px 15px;
+	font-size: 13px;
+	cursor: pointer;
+	background-color: transparent;
+}
+
+.backButton:hover {
+	background: rgb(226, 226, 222);
+}
+
+.teamAndButton {
+	display: flex;
+	flex-direction: row;
+}
+
+.teamCaption {
+	width: 125px;
+}
+
+.editButton {
+	border: none;
+	outline: none;
+	border-radius: 10px;
+	height: 35px;
+	padding: 5px 15px;
+	font-size: 13px;
+	background-color: transparent;
+	cursor: pointer;
+}
+
+.editButton:hover {
+	background: rgb(226, 226, 222);
+}

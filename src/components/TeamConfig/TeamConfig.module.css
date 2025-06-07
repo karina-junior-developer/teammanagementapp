@@ -1,0 +1,47 @@
+.teamConfigBlock {
+	display: flex;
+	align-items: center;
+	gap: 5px;
+}
+
+.editingInput {
+	padding: 0.5rem;
+	border: none;
+	outline: none;
+	width: 310px;
+	margin-right: 5px;
+	color: #595959;
+	font-size: 13px;
+	background-color: #e4db88;
+	border-radius: 10px;
+}
+
+.editingInput:hover {
+	cursor: pointer;
+}
+
+.editingButtons {
+	display: flex;
+	gap: 4px;
+}
+
+.saveButton,
+.cancelButton {
+	margin-right: 5px;
+	border: none;
+	outline: none;
+	border-radius: 10px;
+	height: 31px;
+	width: 60px;
+	font-size: 13px;
+	background-color: transparent;
+	cursor: pointer;
+}
+
+.saveButton:hover {
+	background-color: rgb(226, 226, 222);
+}
+
+.cancelButton:hover {
+	background-color: rgb(226, 226, 222);
+}

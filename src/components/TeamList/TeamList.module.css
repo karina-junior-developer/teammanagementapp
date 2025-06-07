@@ -1,5 +1,5 @@
 .teamList {
-	margin-top: 30px;
+	margin-top: 20px;
 	width: 300px;
 }
 
@@ -9,11 +9,20 @@
 	margin-bottom: 10px;
 	width: 450px;
 	font-size: 14px;
+	border: 1px solid rgb(170, 170, 169);
+	padding: 10px;
+	border-radius: 5px;
 }
 
 .main {
 	display: flex;
 	flex-direction: row;
+}
+
+.caption {
+	margin: 0;
+	font-size: 17px;
+	font-weight: 400;
 }
 
 .title {
@@ -25,13 +34,18 @@
 	width: 20%;
 }
 
-button {
+.detailsButton {
 	border: none;
 	outline: none;
 	border-radius: 10px;
 	height: 25px;
-	width: 55px;
+	width: 65px;
+	padding: 5px 10px;
 	font-size: 13px;
-	background-color: rgb(245, 245, 161);
+	background: transparent;
 	cursor: pointer;
+}
+
+.detailsButton:hover {
+	background: rgb(226, 226, 222);
 }

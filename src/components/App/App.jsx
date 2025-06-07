@@ -1,10 +1,16 @@
 import styles from './App.module.css';
-import { Header, Sidebar, Searchbar, Loading, TeamList } from '../index';
+import { Header, Sidebar, Searchbar, Loading, TeamList, TeamView } from '../index';
 import { useRequestGetTeams } from '../../hooks';
 import { teamsURL } from '../../constants';
+import { useSelector } from 'react-redux';
+import { selectedTeams, selectedTeamId } from '../../selectors';
 
 export const App = () => {
 	const { isLoading } = useRequestGetTeams(teamsURL);
+	const teams = useSelector(selectedTeams);
+	const teamId = useSelector(selectedTeamId);
+
+	const selectedTeam = teams.find((team) => team.id === teamId);
 
 	return (
 		<>
@@ -22,7 +28,13 @@ export const App = () => {
 					<Sidebar />
 				</div>
 				<div className={styles.mainBlock}>
-					{isLoading ? <Loading /> : <TeamList />}
+					{isLoading ? (
+						<Loading />
+					) : teamId ? (
+						<TeamView selectedTeam={selectedTeam} />
+					) : (
+						<TeamList />
+					)}
 				</div>
 			</div>
 		</>
