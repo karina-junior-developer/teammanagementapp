@@ -1,10 +1,8 @@
 import styles from './TeamList.module.css';
-import { useSelector, useDispatch } from 'react-redux';
-import { selectedTeams } from '../../selectors';
+import { useDispatch } from 'react-redux';
+import PropTypes from 'prop-types';
 
-export const TeamList = () => {
-	const teams = useSelector(selectedTeams);
-
+export const TeamList = ({ foundValue }) => {
 	const dispatch = useDispatch();
 
 	const onClickView = (id) => {
@@ -15,7 +13,7 @@ export const TeamList = () => {
 		<div className={styles.teamList}>
 			<h2 className={styles.caption}>Teams:</h2>
 			<ul className={styles.teamListUl}>
-				{teams.map(({ name, createdAt, id, members }) => (
+				{foundValue.map(({ name, createdAt, id, members }) => (
 					<li className={styles.teamListLi} key={id}>
 						<div className={styles.main}>
 							<div className={styles.title}>
@@ -35,4 +33,8 @@ export const TeamList = () => {
 			</ul>
 		</div>
 	);
+};
+
+TeamList.PropTypes = {
+	foundValue: PropTypes.array,
 };

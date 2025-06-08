@@ -9,6 +9,7 @@ import {
 	setEditMembersRole,
 	setEditMembersEmail,
 } from '../../actions';
+import PropTypes from 'prop-types';
 
 export const TeamView = ({ selectedTeam }) => {
 	const dispatch = useDispatch();
@@ -77,7 +78,12 @@ export const TeamView = ({ selectedTeam }) => {
 						<h2 className={styles.selectedTeamCaption}>
 							{selectedTeam.name}
 						</h2>
-						<button onClick={() => setIsEditingTeamName(true)}>Edit</button>
+						<button
+							className={styles.editButton}
+							onClick={() => setIsEditingTeamName(true)}
+						>
+							Edit
+						</button>
 					</>
 				)}
 			</div>
@@ -106,6 +112,7 @@ export const TeamView = ({ selectedTeam }) => {
 									<>
 										{member.name}
 										<button
+											className={styles.editButton}
 											onClick={() =>
 												startEditing(
 													member.id,
@@ -133,6 +140,7 @@ export const TeamView = ({ selectedTeam }) => {
 									<>
 										{member.role}
 										<button
+											className={styles.editButton}
 											onClick={() =>
 												startEditing(
 													member.id,
@@ -160,6 +168,7 @@ export const TeamView = ({ selectedTeam }) => {
 									<>
 										{member.email}
 										<button
+											className={styles.editButton}
 											onClick={() =>
 												startEditing(
 													member.id,
@@ -185,4 +194,8 @@ export const TeamView = ({ selectedTeam }) => {
 			</div>
 		</div>
 	);
+};
+
+TeamView.PropTypes = {
+	selectedTeam: PropTypes.object,
 };

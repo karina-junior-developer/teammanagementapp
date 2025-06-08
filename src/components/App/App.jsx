@@ -4,11 +4,13 @@ import { useRequestGetTeams } from '../../hooks';
 import { teamsURL } from '../../constants';
 import { useSelector } from 'react-redux';
 import { selectedTeams, selectedTeamId } from '../../selectors';
+import { useSearchTeam } from '../../hooks';
 
 export const App = () => {
 	const { isLoading } = useRequestGetTeams(teamsURL);
 	const teams = useSelector(selectedTeams);
 	const teamId = useSelector(selectedTeamId);
+	const { onChangeSearchedValue, foundValue, searchedValue } = useSearchTeam();
 
 	const selectedTeam = teams.find((team) => team.id === teamId);
 
@@ -19,7 +21,10 @@ export const App = () => {
 					<Header />
 				</div>
 				<div className={styles.searchbarBlock}>
-					<Searchbar />
+					<Searchbar
+						searchedValue={searchedValue}
+						onChangeSearchedValue={onChangeSearchedValue}
+					/>
 				</div>
 			</div>
 
@@ -33,7 +38,7 @@ export const App = () => {
 					) : teamId ? (
 						<TeamView selectedTeam={selectedTeam} />
 					) : (
-						<TeamList />
+						<TeamList foundValue={foundValue} />
 					)}
 				</div>
 			</div>

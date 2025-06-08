@@ -51,7 +51,7 @@ export const reducer = (state = initialState, action) => {
 			};
 		}
 
-		case 'SET_EDIT_ MEMBERS_ROLE': {
+		case 'SET_EDIT_MEMBERS_ROLE': {
 			return {
 				...state,
 				editMember: {
