@@ -28,4 +28,5 @@ What I would improve with more time:
 5. Check CSS and make it more efficient.
 6. Improve responsive interface. Concentrate more on user experience.
 7. Implement real rounting for sidebar items.
-8. Proptypes double check.
+8. Add combineReducers to split Redux state into smaller parts.
+9. Double check all components, proptypes.
