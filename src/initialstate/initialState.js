@@ -3,6 +3,7 @@ export const initialState = {
 	originalTeams: [],
 	isLoading: false,
 	teamId: null,
+	isVisible: false,
 	editTeam: {
 		id: null,
 		name: '',

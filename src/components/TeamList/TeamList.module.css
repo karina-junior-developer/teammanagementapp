@@ -21,7 +21,7 @@
 
 .caption {
 	margin: 0;
-	font-size: 17px;
+	font-size: 15px;
 	font-weight: 400;
 }
 
@@ -48,4 +48,24 @@
 
 .detailsButton:hover {
 	background: rgb(226, 226, 222);
+}
+
+@media (max-width: 768px) {
+	.teamList {
+		width: 90%;
+	}
+
+	.teamListLi {
+		width: 100%;
+		font-size: 13px;
+	}
+
+	.main {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.detailsButton {
+		margin-top: 10px;
+	}
 }

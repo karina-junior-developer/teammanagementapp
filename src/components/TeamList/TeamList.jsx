@@ -1,12 +1,13 @@
 import styles from './TeamList.module.css';
 import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
+import { setTeamId } from '../../actions';
 
 export const TeamList = ({ foundValue }) => {
 	const dispatch = useDispatch();
 
 	const onClickView = (id) => {
-		dispatch({ type: 'SET_TEAM_ID', payload: id });
+		dispatch(setTeamId(id));
 	};
 
 	return (

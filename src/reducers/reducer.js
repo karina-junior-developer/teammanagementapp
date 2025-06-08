@@ -83,6 +83,13 @@ export const reducer = (state = initialState, action) => {
 			};
 		}
 
+		case 'SET_IS_VISIBLE': {
+			return {
+				...state,
+				isVisible: action.payload,
+			};
+		}
+
 		default:
 			return state;
 	}

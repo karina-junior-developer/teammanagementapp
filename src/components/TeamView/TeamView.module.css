@@ -67,3 +67,38 @@ td {
 .editButton:hover {
 	background: rgb(226, 226, 222);
 }
+
+@media (max-width: 768px) {
+	.selectedTeamCaption {
+		font-size: 14px;
+	}
+	.teamBlock {
+		width: 90%;
+		overflow-x: auto;
+	}
+
+	.teamAndButton {
+		gap: 2px;
+	}
+
+	table {
+		font-size: 12px;
+	}
+
+	th,
+	td {
+		padding: 8px 5px;
+	}
+
+	.editButton {
+		font-size: 12px;
+	}
+
+	.selectedTeamCaption {
+		margin-top: 1.5px;
+	}
+
+	.backButton {
+		font-size: 12px;
+	}
+}

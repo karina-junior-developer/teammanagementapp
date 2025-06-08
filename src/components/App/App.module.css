@@ -30,3 +30,28 @@
 	flex: 1;
 	margin-left: 70px;
 }
+
+@media (max-width: 768px) {
+	.appContent {
+		flex-direction: column;
+	}
+
+	.sidebarBlock {
+		width: 100%;
+		margin-top: 20px;
+	}
+
+	.mainBlock {
+		width: 100%;
+		margin-left: 0;
+		padding: 0 10px;
+	}
+
+	.appHeaderAndSearch {
+		padding: 0 10px;
+	}
+
+	.searchbarBlock {
+		margin-top: 20px;
+	}
+}

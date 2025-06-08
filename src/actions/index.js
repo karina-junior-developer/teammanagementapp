@@ -9,3 +9,4 @@ export * from './set-edit-members-email';
 export * from './set-cancel-edit';
 export * from './set-edit-team';
 export * from './set-edit-member';
+export * from './set-is-visible';

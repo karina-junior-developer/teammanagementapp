@@ -19,3 +19,15 @@
 	margin: 0;
 	padding-left: 20px;
 }
+
+@media (max-width: 768px) {
+	.sidebarLi {
+		display: inline-block;
+		margin-right: 10px;
+		font-size: 13px;
+	}
+
+	.sidebarUl {
+		padding-left: 10px;
+	}
+}

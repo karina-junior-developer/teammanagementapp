@@ -45,3 +45,22 @@
 .cancelButton:hover {
 	background-color: rgb(226, 226, 222);
 }
+
+@media (max-width: 768px) {
+	.editingInput {
+		width: 100%;
+		font-size: 12px;
+	}
+
+	.editingButtons {
+		flex-direction: column;
+		gap: 4px;
+		font-size: 12px;
+	}
+
+	.saveButton,
+	.cancelButton {
+		width: 100%;
+		font-size: 12px;
+	}
+}
