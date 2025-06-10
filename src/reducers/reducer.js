@@ -8,12 +8,7 @@ export const reducer = (state = initialState, action) => {
 				teams: action.payload,
 			};
 		}
-		case 'SET_ORIGINAL_TEAMS': {
-			return {
-				...state,
-				originalTeams: action.payload,
-			};
-		}
+
 		case 'SET_IS_LOADING': {
 			return {
 				...state,
@@ -80,13 +75,6 @@ export const reducer = (state = initialState, action) => {
 				...state,
 				editTeam: initialState.editTeam,
 				editMember: initialState.editMember,
-			};
-		}
-
-		case 'SET_IS_VISIBLE': {
-			return {
-				...state,
-				isVisible: action.payload,
 			};
 		}
 

@@ -1,4 +1,4 @@
-import { setIsLoading, setOriginalTeams } from './index';
+import { setIsLoading } from './index';
 
 export const setTeams = (teams) => ({
 	type: 'SET_TEAMS',
@@ -13,7 +13,6 @@ export const fetchTeams = (teamsURL) => {
 			const finalResponse = await loadedResponse.json();
 
 			dispatch(setTeams(finalResponse));
-			dispatch(setOriginalTeams(finalResponse));
 		} catch (error) {
 			console.error('Failed to fetch teams:', error);
 		} finally {

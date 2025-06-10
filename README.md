@@ -1,3 +1,12 @@
+Project setup instruction.
+
+1. npm install
+   Dependencies will be installed
+2. npm run server
+   Backend server will be running at http://localhost:3000/teams
+3. npm run dev
+   App will be running at http://localhost:5173/
+
 Plan realisation.
 
 1. Project setup: vscode file preparation, setup. Creating GIT repository.

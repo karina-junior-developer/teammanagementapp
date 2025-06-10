@@ -1,5 +1,13 @@
 import styles from './App.module.css';
-import { Header, Sidebar, Searchbar, Loading, TeamList, TeamView } from '../index';
+import {
+	Header,
+	Sidebar,
+	Searchbar,
+	Loading,
+	TeamList,
+	TeamView,
+	NoData,
+} from '../index';
 import { useRequestGetTeams } from '../../hooks';
 import { useSelector } from 'react-redux';
 import { selectedTeams, selectedTeamId } from '../../selectors';
@@ -37,6 +45,8 @@ export const App = () => {
 						<Loading />
 					) : teamId ? (
 						<TeamView selectedTeam={selectedTeam} />
+					) : teams.length === 0 ? (
+						<NoData />
 					) : (
 						<TeamList foundValue={foundValue} />
 					)}

@@ -7,7 +7,7 @@ export const Searchbar = ({ searchedValue, onChangeSearchedValue }) => {
 			<input
 				className={styles.searchInput}
 				type="text"
-				name="item"
+				name="team"
 				placeholder="Find a team..."
 				value={searchedValue}
 				onChange={onChangeSearchedValue}
